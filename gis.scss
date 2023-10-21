@@ -1,0 +1,547 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* * Import fonts from google fonts. Poppins and Poppins bold */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@600&display=swap");
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+  font-family: Poppins;
+}
+
+/* Using scss all the elements at body are positioned using the flex style*/
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  /* And the style is done the same way as desscribed at the html page*/
+  .nav2 {
+    font-size: 10px;
+    top: 42px;
+    position: relative;
+    width: 70%;
+    right: -350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .part1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #f9f9f8;
+
+    background-image: url("webPhoto/Group\ 1.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: center;
+    // background-position: 0%;
+
+    header {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+
+
+      .logo {
+        position: relative;
+        z-index: 4;
+        width: 14rem;
+        position: fixed;
+        top: 2rem;
+        left: 5rem;
+      }
+
+
+    }
+
+    .menu_text {
+      text-align: center;
+      top: 15rem;
+      position: relative;
+      font-family: "Spline Sans", sans-serif;
+      left: 7%;
+      width: 60rem;
+      bottom: 0px;
+      color: #000000;
+      font-size: 6rem;
+      font-weight: bolder;
+      bottom: 2rem;
+
+      .menu_gis {
+        font-size: 13rem;
+        font-weight: bolder;
+        letter-spacing: 2rem;
+      }
+
+      .menu_project {
+        position: relative;
+        font-size: 4rem;
+        letter-spacing: 10px;
+        top: -40px;
+      }
+
+      .small_text {
+        position: relative;
+        top: -49px;
+        letter-spacing: 5px;
+        font-size: 5rem;
+      }
+    }
+  }
+
+  /* The style for the second part*/
+  .part2 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+
+    .earth_video {
+      float: right;
+      width: 80%;
+      height: 100vh;
+      position: relative;
+    }
+
+    .drop_video {
+      position: absolute;
+      width: 20%;
+      height: 5%;
+      float: left;
+      z-index: 14;
+      background-color: white;
+      border-radius: 0px 0px 200px 0;
+    }
+
+    .animation {
+      display: none;
+      position: absolute;
+      z-index: 19;
+      width: 35%;
+      height: 60%;
+      float: left;
+      background-color: white;
+      border-radius: 0px 0px 200px 0;
+    }
+
+    .landslides {
+      font-size: 5rem;
+      letter-spacing: 4px;
+      font-weight: bolder;
+    }
+
+    .lombardy {
+      position: relative;
+      left: 5px;
+      top: -20px;
+      font-size: 2rem;
+      letter-spacing: 4px;
+      font-weight: bold;
+    }
+
+    .cancel_icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 20px;
+    }
+
+    .lomb {
+      position: relative;
+      left: 5px;
+      font-size: 1.2rem;
+    }
+
+    .text_video {
+      position: relative;
+      top: -9px;
+      letter-spacing: 6px;
+      padding-left: 20px;
+      font-size: 25px;
+    }
+
+    .icon_drop {
+      position: relative;
+      top: 5px;
+    }
+
+    .text-part {
+      text-align: center;
+      position: relative;
+      width: 40%;
+      height: 80%;
+      background-color: #162715cb;
+      left: 50%;
+      top: 5%;
+
+
+    }
+  }
+
+
+
+  /* Also the positioning method in part 5 is grid and also flex*/
+  #part5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // transform: translateY(70.9%);
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(229, 255, 0);
+
+    .map1 {
+      grid-column: 2/3;
+      height: 100%;
+      width: 100%;
+    }
+
+    .contact-us {
+      grid-column: 1/2;
+      background-color: #fff;
+    }
+
+    .contact-text {
+      text-align: center;
+      position: relative;
+      align-self: center;
+      top: 20%;
+      font-size: 5rem;
+    }
+
+    .location {
+      text-align: center;
+      position: relative;
+      align-self: center;
+      top: 35%;
+      font-size: 2rem;
+    }
+
+    .contact {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      position: relative;
+      align-self: flex-end;
+      justify-self: flex-end;
+      top: 55%;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+HTML CSS Result Skip Results Iframe * {
+  background: black;
+}
+
+.scroll {
+  left: 50%;
+  transform: translateY(0%) rotate(45deg);
+
+  opacity: 0;
+}
+
+@keyframes scrolldown {
+  0% {
+    transform: translateY(20%) rotate(45deg);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: translateY(0%) rotate(45deg);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translateY(20%) rotate(45deg);
+    opacity: 0.7;
+  }
+}
+
+
+.button {
+  border: none;
+  background-color: #f2f3f5;
+  border-radius: 20px;
+  padding: 5px;
+  width: 120px;
+  height: 30px;
+  position: relative;
+  top: -30px;
+}
+
+.button1 {
+  border: none;
+  background-color: #f2f3f5;
+  border-radius: 20px;
+  padding: 5px;
+  width: 120px;
+  height: 30px;
+  position: relative;
+  top: -80px;
+}
+
+.button:hover {
+  background-color: #a8dab5;
+}
+
+.button1:hover {
+  background-color: #42b1dd;
+}
+
+/*
+  * ! Used some media queris for making the website usable even at small sizes
+  
+  */
+@media only screen and (max-width: 768px) {
+  html h2 {
+    font-size: 2rem !important;
+  }
+
+  html h1 {
+    font-size: 2.7rem !important;
+  }
+
+  html p {
+    font-size: 1rem !important;
+  }
+}
+
+
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+
+/** Reset */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  z-index: 3;
+
+  .content {
+    display: flex;
+    align-content: center;
+    height: 100%;
+
+    .sidebar {
+      user-select: none;
+      width: 80px;
+      background-image: url("Montain2.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: width 0.5s ease-in;
+      box-shadow: 2px 0 2px 2px rgba(0, 0, 0, 0.21);
+      display: flex;
+      align-items: center;
+
+      .menu,
+      li {
+        list-style: none;
+      }
+
+      .menu {
+        li {
+          display: flex;
+          align-items: center;
+          margin: 0 0 5px 0;
+          padding: 10px 10px 10px 15px;
+          color: #eeeeee;
+          border-left: 5px solid #000000;
+
+          &.selected,
+          &:hover {
+            background: #1e88e5;
+            border-left-color: #e0e0e0;
+            color: #ffff;
+          }
+
+          .icon {
+            margin-right: 20px;
+            max-width: 30px;
+            font-size: 1.2em;
+            display: flex;
+
+            i {
+              width: 20px;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        width: 150px;
+        cursor: pointer;
+
+        .text_smenu {
+          color: #fffefe;
+        }
+      }
+    }
+  }
+}
+
+.text_smenu {
+  color: #00000000;
+}
+
+.popups {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 100vh;
+  background-color: #f8f8f8b2;
+  z-index: 8;
+  color: #000;
+  overflow: auto;
+  margin: 0 auto;
+  left: 150px;
+}
+
+#pop {
+  display: none;
+}
+
+#pop1 {
+  display: none;
+}
+
+#pop2 {
+  display: none;
+}
+
+#pop3 {
+  display: none;
+}
+
+#pop4 {
+  display: none;
+}
+
+#pop5 {
+  display: none;
+}
+
+#pop6 {
+  display: none;
+}
+
+#back {
+  position: relative;
+  top: -140px;
+}
+
+.graphs {
+  width: 25px;
+}
+
+.logo_more {
+  position: relative;
+  width: 55px;
+  // top: 90px;
+  left: -10px;
+  z-index: 11;
+}
+
+.prape {
+  position: relative;
+  font-size: 5px;
+  left: 20px;
+}
+
+.text1 {
+  color: black !important;
+  font-size: 1.3rem;
+  padding: 20px;
+}
+
+.mali {
+  width: 70px;
+}
+
+.theme1 {
+  padding: 20px 0 20px 0;
+  position: relative;
+  width: 500px;
+  left: 50%;
+  transform: translateX(-50%);
+  // padding-left: 40px;
+}
+
+.map_container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+}
+
+#showingBlock {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.74);
+  z-index: 10;
+}
+
+.showImg {
+  display: none;
+  position: absolute;
+  height: 80vh;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+  z-index: 11;
+}
+
+.problem_icon {
+  width: 30px;
+  padding-right: 10px;
+}
+
+#clickImg1,
+#clickImg2,
+#clickImg3,
+#clickImg4,
+#clickImg5,
+#clickImg6,
+#clickImg7,
+#clickImg8,
+#clickImg9,
+#clickImg10,
+#clickImg11,
+#clickImg12,
+#clickImg13,
+#clickImg14,
+#clickImg15,
+#clickImg16,
+#clickImg17,
+#clickImg18,
+#clickImg18,
+#clickImg19,
+#clickImg20,
+#clickImg21 {
+  cursor: zoom-in;
+}
+
+#showingBlock {
+  cursor: zoom-out;
+}

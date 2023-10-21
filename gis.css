@@ -1,0 +1,616 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@600&display=swap");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* * Import fonts from google fonts. Poppins and Poppins bold */
+html {
+  font-size: 62.5%;
+  height: 100%;
+  font-family: Poppins;
+}
+
+/* Using scss all the elements at body are positioned using the flex style*/
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  /* And the style is done the same way as desscribed at the html page*/
+  /* The style for the second part*/
+  /* Also the positioning method in part 5 is grid and also flex*/
+}
+
+body .nav2 {
+  font-size: 10px;
+  top: 42px;
+  position: relative;
+  width: 70%;
+  right: -350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .part1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #f9f9f8;
+  background-image: url("webPhoto/Group 1.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: center;
+}
+
+body .part1 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body .part1 header .logo {
+  position: relative;
+  z-index: 4;
+  width: 14rem;
+  position: fixed;
+  top: 2rem;
+  left: 5rem;
+}
+
+body .part1 .menu_text {
+  text-align: center;
+  top: 15rem;
+  position: relative;
+  font-family: "Spline Sans", sans-serif;
+  left: 7%;
+  width: 60rem;
+  bottom: 0px;
+  color: #000000;
+  font-size: 6rem;
+  font-weight: bolder;
+  bottom: 2rem;
+}
+
+body .part1 .menu_text .menu_gis {
+  font-size: 13rem;
+  font-weight: bolder;
+  letter-spacing: 2rem;
+}
+
+body .part1 .menu_text .menu_project {
+  position: relative;
+  font-size: 4rem;
+  letter-spacing: 10px;
+  top: -40px;
+}
+
+body .part1 .menu_text .small_text {
+  position: relative;
+  top: -49px;
+  letter-spacing: 5px;
+  font-size: 5rem;
+}
+
+body .part2 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+}
+
+body .part2 .earth_video {
+  float: right;
+  width: 80%;
+  height: 100vh;
+  position: relative;
+}
+
+body .part2 .drop_video {
+  position: absolute;
+  width: 20%;
+  height: 5%;
+  float: left;
+  z-index: 14;
+  background-color: white;
+  border-radius: 0px 0px 200px 0;
+}
+
+body .part2 .animation {
+  display: none;
+  position: absolute;
+  z-index: 19;
+  width: 35%;
+  height: 60%;
+  float: left;
+  background-color: white;
+  border-radius: 0px 0px 200px 0;
+}
+
+body .part2 .landslides {
+  font-size: 5rem;
+  letter-spacing: 4px;
+  font-weight: bolder;
+}
+
+body .part2 .lombardy {
+  position: relative;
+  left: 5px;
+  top: -20px;
+  font-size: 2rem;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+body .part2 .cancel_icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+}
+
+body .part2 .lomb {
+  position: relative;
+  left: 5px;
+  font-size: 1.2rem;
+}
+
+body .part2 .text_video {
+  position: relative;
+  top: -9px;
+  letter-spacing: 6px;
+  padding-left: 20px;
+  font-size: 25px;
+}
+
+body .part2 .icon_drop {
+  position: relative;
+  top: 5px;
+}
+
+body .part2 .text-part {
+  text-align: center;
+  position: relative;
+  width: 40%;
+  height: 80%;
+  background-color: #162715cb;
+  left: 50%;
+  top: 5%;
+}
+
+body #part5 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100vh;
+  background-color: #e5ff00;
+}
+
+body #part5 .map1 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  height: 100%;
+  width: 100%;
+}
+
+body #part5 .contact-us {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  background-color: #fff;
+}
+
+body #part5 .contact-text {
+  text-align: center;
+  position: relative;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  top: 20%;
+  font-size: 5rem;
+}
+
+body #part5 .location {
+  text-align: center;
+  position: relative;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  top: 35%;
+  font-size: 2rem;
+}
+
+body #part5 .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  position: relative;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  justify-self: flex-end;
+  top: 55%;
+  font-size: 1.5rem;
+}
+
+HTML CSS Result Skip Results Iframe * {
+  background: black;
+}
+
+.scroll {
+  left: 50%;
+  -webkit-transform: translateY(0%) rotate(45deg);
+          transform: translateY(0%) rotate(45deg);
+  opacity: 0;
+}
+
+@-webkit-keyframes scrolldown {
+  0% {
+    -webkit-transform: translateY(20%) rotate(45deg);
+            transform: translateY(20%) rotate(45deg);
+    opacity: 0.7;
+  }
+  50% {
+    -webkit-transform: translateY(0%) rotate(45deg);
+            transform: translateY(0%) rotate(45deg);
+    opacity: 0.2;
+  }
+  100% {
+    -webkit-transform: translateY(20%) rotate(45deg);
+            transform: translateY(20%) rotate(45deg);
+    opacity: 0.7;
+  }
+}
+
+@keyframes scrolldown {
+  0% {
+    -webkit-transform: translateY(20%) rotate(45deg);
+            transform: translateY(20%) rotate(45deg);
+    opacity: 0.7;
+  }
+  50% {
+    -webkit-transform: translateY(0%) rotate(45deg);
+            transform: translateY(0%) rotate(45deg);
+    opacity: 0.2;
+  }
+  100% {
+    -webkit-transform: translateY(20%) rotate(45deg);
+            transform: translateY(20%) rotate(45deg);
+    opacity: 0.7;
+  }
+}
+
+.button {
+  border: none;
+  background-color: #f2f3f5;
+  border-radius: 20px;
+  padding: 5px;
+  width: 120px;
+  height: 30px;
+  position: relative;
+  top: -30px;
+}
+
+.button1 {
+  border: none;
+  background-color: #f2f3f5;
+  border-radius: 20px;
+  padding: 5px;
+  width: 120px;
+  height: 30px;
+  position: relative;
+  top: -80px;
+}
+
+.button:hover {
+  background-color: #a8dab5;
+}
+
+.button1:hover {
+  background-color: #42b1dd;
+}
+
+/*
+  * ! Used some media queris for making the website usable even at small sizes
+  
+  */
+@media only screen and (max-width: 768px) {
+  html h2 {
+    font-size: 2rem !important;
+  }
+  html h1 {
+    font-size: 2.7rem !important;
+  }
+  html p {
+    font-size: 1rem !important;
+  }
+}
+
+/** Reset */
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  z-index: 3;
+}
+
+.container .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 100%;
+}
+
+.container .content .sidebar {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 80px;
+  background-image: url("Montain2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: width 0.5s ease-in;
+  transition: width 0.5s ease-in;
+  -webkit-box-shadow: 2px 0 2px 2px rgba(0, 0, 0, 0.21);
+          box-shadow: 2px 0 2px 2px rgba(0, 0, 0, 0.21);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .content .sidebar .menu,
+.container .content .sidebar li {
+  list-style: none;
+}
+
+.container .content .sidebar .menu li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 5px 0;
+  padding: 10px 10px 10px 15px;
+  color: #eeeeee;
+  border-left: 5px solid #000000;
+}
+
+.container .content .sidebar .menu li.selected, .container .content .sidebar .menu li:hover {
+  background: #1e88e5;
+  border-left-color: #e0e0e0;
+  color: #ffff;
+}
+
+.container .content .sidebar .menu li .icon {
+  margin-right: 20px;
+  max-width: 30px;
+  font-size: 1.2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .content .sidebar .menu li .icon i {
+  width: 20px;
+}
+
+.container .content .sidebar:hover {
+  width: 150px;
+  cursor: pointer;
+}
+
+.container .content .sidebar:hover .text_smenu {
+  color: #fffefe;
+}
+
+.text_smenu {
+  color: #00000000;
+}
+
+.popups {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  height: 100vh;
+  background-color: #f8f8f8b2;
+  z-index: 8;
+  color: #000;
+  overflow: auto;
+  margin: 0 auto;
+  left: 150px;
+}
+
+#pop {
+  display: none;
+}
+
+#pop1 {
+  display: none;
+}
+
+#pop2 {
+  display: none;
+}
+
+#pop3 {
+  display: none;
+}
+
+#pop4 {
+  display: none;
+}
+
+#pop5 {
+  display: none;
+}
+
+#pop6 {
+  display: none;
+}
+
+#back {
+  position: relative;
+  top: -140px;
+}
+
+.graphs {
+  width: 25px;
+}
+
+.logo_more {
+  position: relative;
+  width: 55px;
+  left: -10px;
+  z-index: 11;
+}
+
+.prape {
+  position: relative;
+  font-size: 5px;
+  left: 20px;
+}
+
+.text1 {
+  color: black !important;
+  font-size: 1.3rem;
+  padding: 20px;
+}
+
+.mali {
+  width: 70px;
+}
+
+.theme1 {
+  padding: 20px 0 20px 0;
+  position: relative;
+  width: 500px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.map_container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+}
+
+#showingBlock {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.74);
+  z-index: 10;
+}
+
+.showImg {
+  display: none;
+  position: absolute;
+  height: 80vh;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 11;
+}
+
+.problem_icon {
+  width: 30px;
+  padding-right: 10px;
+}
+
+#clickImg1,
+#clickImg2,
+#clickImg3,
+#clickImg4,
+#clickImg5,
+#clickImg6,
+#clickImg7,
+#clickImg8,
+#clickImg9,
+#clickImg10,
+#clickImg11,
+#clickImg12,
+#clickImg13,
+#clickImg14,
+#clickImg15,
+#clickImg16,
+#clickImg17,
+#clickImg18,
+#clickImg18,
+#clickImg19,
+#clickImg20,
+#clickImg21 {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+#showingBlock {
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+}
+/*# sourceMappingURL=gis.css.map */

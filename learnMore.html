@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="gis.css" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="iconfinder-aeaaqqdqqas-3305209_120851.png"
+    />
+    <!-- <script src="gis.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="openLayers/main.css" />
+    <!--OpenLayers-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="openLayers/v6.9.0-dist/ol.css"
+    />
+    <script type="text/javascript" src="openLayers/v6.9.0-dist/ol.js"></script>
+
+    <!-- Layer Switcher -->
+    <script src="http://rawgit.com/walkermatt/ol-layerswitcher/master/dist/ol-layerswitcher.js"></script>
+    <link
+      rel="stylesheet"
+      href="http://rawgit.com/walkermatt/ol-layerswitcher/master/src/ol-layerswitcher.css"
+    />
+
+    <!--JQuery-->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-
+CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $("#click").click(function () {
+          $("#pop").toggle();
+          $("#pop1").hide();
+          $("#pop2").hide();
+          $("#pop3").hide();
+          $("#pop4").hide();
+          $("#pop5").hide();
+          $("#pop6").hide();
+        });
+        $("#click1").click(function () {
+          $("#pop1").toggle();
+          $("#pop").hide();
+          $("#pop2").hide();
+          $("#pop3").hide();
+          $("#pop4").hide();
+          $("#pop5").hide();
+          $("#pop6").hide();
+        });
+        $("#click2").click(function () {
+          $("#pop2").toggle();
+          $("#pop1").hide();
+          $("#pop").hide();
+          $("#pop3").hide();
+          $("#pop4").hide();
+          $("#pop5").hide();
+          $("#pop6").hide();
+        });
+        $("#click3").click(function () {
+          $("#pop3").toggle();
+          $("#pop1").hide();
+          $("#pop2").hide();
+          $("#pop").hide();
+          $("#pop4").hide();
+          $("#pop5").hide();
+          $("#pop6").hide();
+        });
+        $("#click4").click(function () {
+          $("#pop4").toggle();
+          $("#pop1").hide();
+          $("#pop2").hide();
+          $("#pop3").hide();
+          $("#pop").hide();
+          $("#pop5").hide();
+          $("#pop6").hide();
+        });
+        $("#click5").click(function () {
+          $("#pop5").toggle();
+          $("#pop1").hide();
+          $("#pop2").hide();
+          $("#pop3").hide();
+          $("#pop4").hide();
+          $("#pop").hide();
+          $("#pop6").hide();
+        });
+        $("#click6").click(function () {
+          $("#pop6").toggle();
+          $("#pop1").hide();
+          $("#pop2").hide();
+          $("#pop3").hide();
+          $("#pop4").hide();
+          $("#pop5").hide();
+          $("#pop").hide();
+        });
+        // Showing the different maps-----------------------------------------------------
+        $("#clickImg1").click(function () {
+          $("#showImg1").show();
+          $("#showingBlock").show();
+        });
+        $("#clickImg2").click(function () {
+          $("#showImg2").show();
+          $("#showingBlock").show();
+        });
+        $("#clickImg3").click(function () {
+          $("#showImg3").show();
+          $("#showingBlock").show();
+        });
+        $("#clickImg4").click(function () {
+          $("#showImg4").show();
+          $("#showingBlock").show();
+        });
+        $("#clickImg5").click(function () {
+          $("#showImg5").show();
+          $("#showingBlock").show();
+        });
+        $("#clickImg6").click(function () {
+          $("#showImg6").show();
+          $("#showingBlock").show();
+        });
+        $("#clickImg7").click(function () {
+          $("#showImg7").show();
+          $("#showingBlock").show();
+        });
+        $("#clickImg8").click(function () {
+          $("#showImg8").show();
+          $("#showingBlock").show();
+        });
+        $("#clickImg9").click(function () {
+          $("#showImg9").show();
+          $("#showingBlock").show();
+        });
+        $("#clickImg10").click(function () {
+          $("#showImg10").show();
+          $("#showingBlock").show();
+        });
+        $("#clickImg11").click(function () {
+          $("#showImg11").show();
+          $("#showingBlock").show();
+        });
+        $("#clickImg12").click(function () {
+          $("#showImg12").show();
+          $("#showingBlock").show();
+        });
+        $("#clickImg13").click(function () {
+          $("#showImg13").show();
+          $("#showingBlock").show();
+        });
+        $("#clickImg14").click(function () {
+          $("#showImg14").show();
+          $("#showingBlock").show();
+        });
+        $("#clickImg15").click(function () {
+          $("#showImg15").show();
+          $("#showingBlock").show();
+        });
+        $("#clickImg16").click(function () {
+          $("#showImg16").show();
+          $("#showingBlock").show();
+        });
+        $("#clickImg17").click(function () {
+          $("#showImg17").show();
+          $("#showingBlock").show();
+        });
+        $("#clickImg18").click(function () {
+          $("#showImg18").show();
+          $("#showingBlock").show();
+        });
+        $("#clickImg19").click(function () {
+          $("#showImg19").show();
+          $("#showingBlock").show();
+        });
+        $("#clickImg20").click(function () {
+          $("#showImg20").show();
+          $("#showingBlock").show();
+        });
+        $("#clickImg21").click(function () {
+          $("#showImg21").show();
+          $("#showingBlock").show();
+        });
+        // Closing images============================================
+        $("#showingBlock").click(function () {
+          $("#showImg1").hide();
+          $("#showImg2").hide();
+          $("#showImg3").hide();
+          $("#showImg4").hide();
+          $("#showImg5").hide();
+          $("#showImg6").hide();
+          $("#showImg7").hide();
+          $("#showImg8").hide();
+          $("#showImg9").hide();
+          $("#showImg10").hide();
+          $("#showImg11").hide();
+          $("#showImg12").hide();
+          $("#showImg13").hide();
+          $("#showImg14").hide();
+          $("#showImg15").hide();
+          $("#showImg16").hide();
+          $("#showImg17").hide();
+          $("#showImg18").hide();
+          $("#showImg19").hide();
+          $("#showImg20").hide();
+          $("#showImg21").hide();
+          $("#showingBlock").hide();
+        });
+      });
+    </script>
+
+    <title>GIS Learn More</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <section class="content">
+        <nav class="sidebar">
+          <ul class="menu">
+            <li id="back">
+              <div class="icon">
+                <a href="gis.html">
+                  <img
+                    src="1x/Asset 2-8.png"
+                    class="logo_more"
+                    aria-hidden="true"
+                /></a>
+              </div>
+            </li>
+            <li id="click">
+              <div class="icon">
+                <img
+                  class="graphs"
+                  src="openLayers/Picture7.png"
+                  aria-hidden="true"
+                />
+              </div>
+              <div class="text_smenu">Theme Introduction</div>
+            </li>
+            <li id="click1">
+              <div class="icon">
+                <img
+                  class="graphs"
+                  src="openLayers/Picture2.png"
+                  aria-hidden="true"
+                />
+              </div>
+              <div class="text_smenu">Environmental Factors</div>
+            </li>
+            <li id="click2">
+              <div class="icon">
+                <img
+                  class="graphs"
+                  src="openLayers/Picture3.png"
+                  aria-hidden="true"
+                />
+              </div>
+              <div class="text_smenu">“Salt and Pepper” Effect</div>
+            </li>
+            <li id="click3">
+              <div class="icon">
+                <img
+                  class="graphs"
+                  src="openLayers/Picture5.png"
+                  aria-hidden="true"
+                />
+              </div>
+              <div class="text_smenu">Landslide Susceptibility Model</div>
+            </li>
+            <li id="click4">
+              <div class="icon">
+                <img
+                  class="graphs"
+                  src="openLayers/Picture4.png"
+                  aria-hidden="true"
+                />
+              </div>
+              <div class="text_smenu">Map Generation</div>
+            </li>
+            <li id="click5">
+              <div class="icon">
+                <img
+                  class="graphs"
+                  src="openLayers/Picture6.png"
+                  aria-hidden="true"
+                />
+              </div>
+              <div class="text_smenu">Analysis</div>
+            </li>
+            <li id="click6">
+              <div class="icon">
+                <img
+                  class="graphs"
+                  src="openLayers/Picture8.png"
+                  aria-hidden="true"
+                />
+              </div>
+              <div class="text_smenu">More info</div>
+            </li>
+          </ul>
+
+          <!--	<ul class="settings">
+            <li> <i class="fa fa-gear" aria-hidden="true"></i> </li>
+            <li> <i class="fa fa-exclamation-triangle"> </i> </li>
+            <li> <i class="fa fa-question-circle" aria-hidden="true"></i> </li>
+            <li> <i class="fa fa-power-off"> </i> </li>
+          </ul>		-->
+        </nav>
+        <div class="module-container">
+          <section class="module-gist"></section>
+          <section class="main-view"></section>
+        </div>
+      </section>
+    </div>
+    <div class="popups" id="pop">
+      <p class="text1">
+        <span class="mali"><img src="webPhoto/Picture4.png" class="mali" /></span
+        >Landslides are among the most hazardous natural instability processes,
+        which globally lead enormous socio-economical losses and damage to
+        property every year. <br />Shallow landslides and debris flows represent
+        one of the major causes of destruction to structures and
+        infrastructures,injured people and casualties in mountain and hilly
+        regions: they are usually triggered by short and severe rainfalls.
+        Shallow landslides generally involve small volumes, unlike debris
+        flows.However, both can be extremely damaging due to their widespread
+        spatial distribution across territories, rapid development and high
+        velocity of propagation. <br />Landslide risk can be defined as the
+        probability of the occurrence of a potentially damaging landslide in
+        each area and for a defined period. Hazard assessment requires the
+        estimation of the landslide magnitude, temporal frequency and spatial
+        location . <br />The affectable area and recurrence time are complicated
+        to predict because they are correlated to the complex natural processes
+        that control the mass movement and the difficulty in raising historical
+        landslide data respectively. Surely it could be easier to confine their
+        predictive models to single slopes or very small areas for which
+        detailed physical parameters and historical records can be found.
+        <br />On the other hand, the spatial distribution of potentially
+        unstable areas can be easier to predict by assessing the likelihood of
+        landslide occurrence in a region on the basis of the local ground
+        conditions. <br />Therefore, assessing landslide susceptibility
+        represents the first step in evaluating landslide identification and
+        mapping of areas, where slope instability occurred in the past. These
+        areas are useful to predict the spatial location of future landslide
+        initiation.
+      </p>
+      <img src="webPhoto/theme1.png" class="theme1" />
+      <p class="text1">
+        This was the target of our project, which is disclosed in the following
+        sections. All the outputs presented, where developed according to the
+        steps shown above:
+      </p>
+      <img src="webPhoto/theme2.png" class="theme1"  />
+    </div>
+    <div class="popups" id="pop1">
+      <p class="text1">
+        To start the problem from its genesis, we were given five affecting
+        factors related to the landslides of our area of study. These features,
+        selected to evaluate the occurrence of landslides and predict the future
+        ones, were given in a certain data format:
+      </p>
+      <img src="webPhoto/theme3.png" class="theme1" style="width: 50%"/>
+      <p class="text1">
+        The geo-environmental affecting factors were extracted from the DTM
+        (Digital Terrain Model) Raster, which contains the elevation data of the
+        terrain in a digital format. According to this raster, we rasterized all
+        the above vector layers using as a burn-in value the distance and using
+        the properties of DTM (CRS, extent, unit, pixel size):
+      </p>
+      <img src="webPhoto/theme4.png" class="theme1" />
+      <img src="webPhoto/dtm jpg.jpg" style="padding-top: 20px" class="theme1" />
+      <p class="text1">
+        <u>Buffer vectors</u> such as: roads, faults, rivers, show the area that
+        is within a distance (defined in each map legend) from each map feature.
+        The reason why we use buffer vectors is because we want to determine the
+        areas which are near these map features to predict landslides surfaces.
+        For example: Faults can be a factor that triggers landslides, but with
+        buffer we can understand in what distance do the faults affect such
+        surfaces. Hydrologic factors like rivers reflect the importance of
+        ground water in the occurrence of landslides.
+      </p>
+      <div class="map_container">
+        <img
+          id="clickImg1"
+          src="webPhoto/roads.png"
+          style="
+            padding-top: 20px;
+            height: 200px;
+            width: 170px;
+            padding-right: 20px;
+          "
+          class="theme1"
+        />
+        <img
+          id="clickImg2"
+          src="webPhoto/rivers_.png"
+          style="
+            padding-top: 20px;
+            height: 200px;
+            width: 170px;
+            padding-right: 15px;
+          "
+          class="theme1"
+        />
+        <img
+          id="clickImg3"
+          src="webPhoto/faults.png"
+          style="padding-top: 20px; height: 200px; width: 170px"
+          class="theme1"
+        />
+      </div>
+      <p class="text1">
+        Another physical factor that determines a landslide risk is the
+        “bedrock” or geology cover. For this reason, we decided to also add on
+        this session, a map of geology of our area of interest. The data,
+        represented as a vector, were downloaded from USGS. Click
+        <a
+          href="https://certmapper.cr.usgs.gov/data/apps/world-maps/"
+          target="_blank"
+          >here.</a
+        >
+      </p>
+      <p class="text1">
+        The vector had a different Coordinate Reference System from our project,
+        so we changed it from WGS 1984 Lambert Conformal Conic to WGS 84 / UTM
+        zone 32N. From classifying these data and clipping them according to our
+        group watershed, we concluded that the region’s geology cover consists
+        of sedimentary rock units, as listed in the map’s legend. This is
+        consequently showing that our study area is predisposed to be affected
+        by landslides. This could be explained from the soft nature of
+        sedimentary rocks. They are composed of many layers and their deep
+        weathering weakens the rock making them unstable.
+      </p>
+      <img
+        id="clickImg4"
+        src="webPhoto/geologic map.png"
+        style="padding-top: 20px; height: 200px; width: 170px"
+        class="theme1"
+      />
+
+      <p class="text1">
+        <u>NDVI</u>, as a remotely sensed data, is closely related to land
+        degradation and landslide. This raster is used to mirror the vegetation
+        density, as an influencing factor in susceptibility assessment studies.
+        <br />
+        NDVI is classified in 3 levels, with an 0.2 interval and 2 levels, one
+        with values lower than 0 and one with values higher than 0.6. The higher
+        the index value the denser the vegetation cover.
+        <ul class="text1" style="position:relative;left: 20px;">
+          <li>NDVI < 0 - In that part of the zone there is no vegetation. These values correspond to barren areas of rock. </li>
+          <li>NDVI 0-0.2 – Indicates that vegetation is in a stage before tillering.</li>
+          <li>NDVI 0.2-0.4 – Plants have resumed vegetation. Are considered moderate values that represent grassland.</li>
+          <li>NDVI 0.4-0.6 – Is a good value of vegetation and indicates healthy vegetation.</li>
+          <li>NDVI > 0.6 – It’s not always a good indicator, but it depends on the period when the area is monitored. </li>
+        </ul>
+        
+      </p>
+      <p class="text1">In our study area the index interval 0.4 - 0.6 occupies the largest percentage and the index >0.6 is almost absent. The territories with no vegetation are the ones extended near the inhabited areas.</p>
+      <img
+        id="clickImg5"
+        src="webPhoto/NDVI1.jpeg"
+        style="padding-top: 20px; height: 200px; width: 170px"
+        class="theme1"
+      />
+      <p class="text1"><u>Slope</u><br>
+        From the dtm layer we extracted the Slope factor, determining the rising and falling surface, using degrees as unit.<br>
+        The reason why we study this factor is because of its importance in defining the amount of mass movement during landslides.<br> 
+        We divided the slopes in 8 classes, as shown in the map, where one interval is 10<sup>o</sup>.
+        0 angle shows the areas with no slope, also called stable areas.<br> 
+        The areas with slope from 11<sup>o</sup> to 40<sup>o</sup> occupy the biggest percentage of the total area. 
+        Zones with slope bigger than 50 are almost not present. This fact shows that our area does not have large terrain fractures.<br>
+        If we analyze the relation between landslides and slope angle, we notice that most of the landslides were observed for slopes > 20<sup>o</sup>. 
+        </p>
+
+        <img
+        id="clickImg6"
+        src="webPhoto/slope landslide.jpeg"
+        style="padding-top: 20px; height: 200px; width: 170px"
+        class="theme1"
+      />
+      <p class="text1"><u>Aspect</u><br>
+        Aspect is an important factor because it has a crucial role in controlling factors such as rainfall intensity, soil moisture, weathering. In addition to this it controls the properties of the slope deposits material. It shows the direction the downhill slope is facing.<br>
+        The layer is divided into 8 categories. From the map we can see that South and West-facing aspects dominate the classes.
+        </p>
+        <img
+        id="clickImg7"
+        src="webPhoto/aspect.jpeg"
+        style="padding-top: 20px; height: 200px; width: 170px"
+        class="theme1"
+      />
+<p class="text1"><u>Plan and Profile</u><br>
+  One essential component of terrain instability is the landform, represented from two types of curvature such as plan and profile curvature. We are interested if the values of plan and profile curvatures are bigger, equal, or smaller than 0. According to this we classify the raster layers.<br>
+  The phrase curvature relates to the scale of change of the slope and aspect rise. According to this relation we concluded that more landslides are present in the concave landforms. From the map we notice only small white dots of convex landforms.
+  </p>
+  <div class="map_container">
+    <img
+      id="clickImg8"
+      src="webPhoto/profile.png"
+      style="
+        padding-top: 20px;
+        height: 200px;
+        width: 170px;
+        padding-right: 20px;
+        
+      "
+      class="theme1"
+    />
+    
+    <img
+      id="clickImg9"
+      src="webPhoto/plan.png"
+      style="padding-top: 20px; height: 200px; width: 170px;"
+      class="theme1"
+    />
+  </div>
+ 
+    </div>
+    <div class="popups" id="pop2">
+      <p class="text1">During the data preprocessing, we focus on shallow landslides and exclude hard rocks. 
+        From the Slope layer we extract the No Landslide Zones (NLZ) layer by using the following expression in the raster calculator: “slope@1" < 20 OR " slope@1" > 70. NLZ correspond to pixels with value equal to 1.
+        </p>
+        <img
+        id="clickImg10"
+        src="webPhoto/NLZ.png"
+        style="padding-top: 20px; height: 200px; width: 170px"
+        class="theme1"
+      />
+      <p class="text1">As we can see we have a considerable number of small areas on the raster map, that is why we use the “Salt and Pepper” effect. This procedure removes raster polygons smaller than a provided threshold size (in pixels) and replaces them with the pixel value of the largest neighbor polygon. <br>
+        We experimented by choosing three different thresholds until we got a clear representation of NLZ areas, with a threshold of 40.
+        </p>
+        <img
+        id="clickImg11"
+        src="webPhoto/theme7.png"
+        style="padding-top: 20px; height: 200px;"
+        class="theme1"
+      />
+      <p class="text1">As a further step we removed the NLZ, which were overlapping with the polygons of the Landslide Inventory layer. In both these layers we created a new field, in their attribute tables, named Hazard and assigned 0 to the NLZ and 1 to Landslide Inventory layer</p>
+      <img
+      id="clickImg12"
+      src="webPhoto/theme8.png"
+      style="padding-top: 20px; height: 250px;"
+      class="theme1"
+    />
+    </div>
+    <div class="popups" id="pop3">
+     <p class="text1"><span style="font-size:20px"><u>Data preprocessing for susceptibility mapping</u></span><br>
+      For the generation of our susceptibility map, we based the data preprocessing in a Machine Learning Algorithm. 
+      </p>
+      <img
+      id="clickImg13"
+      src="webPhoto/machine learning jpg 2.jpg"
+      style="padding-top: 20px; height: 250px;width: 50%;"
+      class="theme1"
+    />
+    <p class="text1">‘Training points’ is the data we used to train the algorithm, in which the model relayed. 
+      On the other hand, the ‘Testing Points’ helped us validate the process of the algorithm’s training and optimize it for getting better results. 
+      We agreed to use a ratio 80/20 between training and testing points to train our model and a total of 3000 points.
+      </p>
+      <img
+      
+      src="webPhoto/theme9.jpg"
+      style="padding-top: 20px; height: 150px;width: 70%;"
+      class="theme1"
+    />
+    <p class="text1">During this stage of the project, we created random points inside the polygons of the merged vector layer, which contains the landslide and non-landslide areas. In this vector the values of Hazard equal to 0 correspond to non-landslide areas and Hazard equal to 1 correspond to landslide areas. <br>
+      Moreover, we noticed that non-landslide areas are wider than the landslide ones. For this reason, we divided 2300 points on Hazard=0 and 700 on Hazard=1.
+      </p>
+      <div class="map_container">
+        <img
+          id="clickImg14"
+          src="webPhoto/Training points.jpeg"
+          style="
+            padding-top: 20px;
+            height: 200px;
+            width: 170px;
+            padding-right: 20px;
+            
+          "
+          class="theme1"
+        />
+        
+        <img
+          id="clickImg15"
+          src="webPhoto/Testing points.jpeg"
+          style="padding-top: 20px; height: 200px; width: 170px;"
+          class="theme1"
+        />
+      </div>
+     
+    </div>
+    <div class="popups" id="pop4">
+     <p class="text1"><span style="font-size:20px"><u>Why do we need the Landslide Susceptibility map?</u></span><br>
+      As mentioned, landslides play a key role in hilly and mountainous environments, like our area, causing disasters and being a constant danger to the local population. <br>
+      To prevent such catastrophe, it is important and necessary to map the territories susceptible to landslides. Information from the map can be used for land-use management.<br>
+      To produce the Landslide Susceptibility model, the geological parameters were extracted from the Digital Terrain Model, with a resolution of 5m pixel size. This complex map contains data showing the risk of landslides in the area, divided in 4 classes or zones.<br>
+      This distribution of landslides, in the 4 zones, is affected by the environmental factors used for the construction of the final map.
+      </p>
+      <img
+          id="clickImg16"
+          src="webPhoto/Susceptibility map.jpeg"
+          style="padding-top: 20px; height: 200px; width: 170px;"
+          class="theme1"
+        />
+        <p class="text1">To get to this conclusion we used the Random Forest Classifier, in QGIS. As input for this feature, we used the Sampled Training Points and the Environmental Factors.</p>
+        <img
+          id="clickImg17"
+          src="webPhoto/theme10.png"
+          style="padding-top: 20px; height: 250px; width: 50%;"
+          class="theme1"
+        />
+        <p class="text1"></p>
+        <p class="text1" style="font-size: 30px; ">
+          <span class="mali"><img src="webPhoto/problem_icon.png" class="problem_icon" /></span
+          >Problems
+        </p>       
+        <p class="text1">While running the script we faced some issues :
+                  </p> 
+                  <img
+          id="clickImg19"
+          src="webPhoto/theme17.png"
+          style="padding-top: 20px; height: 250px; width: 60%;"
+          class="theme1"
+        />
+        <img
+        id="clickImg20"
+        src="webPhoto/theme18.png"
+        style="padding-top: 20px; height: 250px; width: 60%;"
+        class="theme1"
+      />
+        <p class="text1" style="font-size: 30px; ">
+          <span class="mali"><img src="webPhoto/solution_icon.png" class="problem_icon" /></span
+          >Solution
+        </p>       
+        <p class="text1">-Replaced NULL values with 9999 <br>
+           -Changed the extent of DUSAF layer (resample according to DTM properties).<br>
+           -We named every layer as written in the script.
+
+                  </p> 
+
+    </div>
+    <div class="popups" id="pop5">
+      <p class="text1"><span style="font-size:20px"><u>Model Accuracy</u></span><br>
+        To improve the accuracy of our model, we changed the predictions of testing and training points several times. All the models created are represented in the diagram. </p>
+        <img
+         
+          src="webPhoto/theme12.png"
+          style="padding-top: 20px; height: 220px;width: 65% "
+          class="theme1"
+        />
+        <p class="text1">By analyzing we can underline the following: <br>
+&ensp;&ensp;&ensp;-The highest accuracy is reached when:
+ we increase the number of total points 
+we create more training than testing points, which means that we change the ratio between them.
+As it is shown the third model contains the highest accuracy of 83.5%.
+
+        </p>
+        <img
+         
+          src="webPhoto/theme11.jpg"
+          style="padding-top: 20px; height: 80px;width: 65% "
+          class="theme1"
+        />
+        <img
+         
+        src="webPhoto/theme13.png"
+        style="padding-top: 20px; height: 220px;width: 65% "
+        class="theme1"
+      />
+      <p class="text1"><span style="font-size:20px"><u>Landslide Risk</u></span><br>
+        From the below pie chart, you can look at the results of the risked areas from Susceptibility Map generation </p>
+        <img
+         
+        src="webPhoto/theme14.png"
+        style="padding-top: 20px; height: 220px;width: 55% "
+        class="theme1"
+      />
+      <p class="text1"><u><span style="font-size:20px;top:20px;position: relative;">Conclusions:</span></u></p>
+      <ul class="text1" style="position:relative;left: 20px;">
+        <li>Total area of study: 83.10 km2 </li>
+        <li>33% of the area has a low risk (nearly 27.49 km<sup>2</sup>)</li>
+        <li>58% of it has a moderate risk of (47.76 km<sup>2</sup>)</li>
+        <li>9% of the terrain is in a high risk of landslide (7.8 km<sup>2</sup>)</li>
+        <li>This leaves a 0% total of areas with a very high risk of landslide susceptibility (approximately 0.07 km<sup>2</sup>). </li>
+      </ul>
+      <p class="text1"><u>Exposure Assessment</u><br>Landslides cause serious consequences for the population of the region. For this reason, we have analyzed the population affected by the phenomenon showing the percentage of inhabitants in each susceptibility zone.<br>
+        The data were taken from  <a style="color:red" href="https://www.worldpop.org/about">WorldPop Map website</a><br>
+        After downloading the raster dataset, we reprojected and clipped the population raster according to our group watershed’s CRS. As Zones layer we used the resampled susceptibility raster map. This raster was resampled, because the resolution of the zones layer has to be lower than the input layer, which in this case is the Landslide Susceptibility map.
+
+        </p>
+        <img
+          id="clickImg18"
+          src="webPhoto/theme15.png"
+          style="padding-top: 20px; height: 250px; width: 60%;"
+          class="theme1"
+        />
+        <p class="text1"><span style="font-size:20px"><u>Population Exposure</u></span><br>
+          We have shown each susceptibility class with different colors from low to very high. <br>
+The sum represents the value of population pixels that fall in the 4 classes. <br>In all, the diagram shows the exposure of the population, of our area of interest, to landslides. 
+As it is shown most of the population, more than 90% of it, lives in areas with low risk of landslide. A very small percentage of them live in very high-risk exposure zone. 
+ </p>
+            </p>
+        <img
+          id="clickImg21"
+          src="webPhoto/theme19.png"
+          style="padding-top: 20px; height: 250px; width: 60%;"
+          class="theme1"
+        />
+    </div>
+    <div class="popups" id="pop6">
+      <p class="text1" style="font-size:20px">On this section, we are providing to our web visitors a list of QGIS Tools we used for realizing this project: </p>
+      <ul class="text1" style="position:relative;left: 20px;">
+        <li>Vector clipping: Vector- Geoprocessing Tools-Clip</li>
+        <li>Rasterizing the vectors: Raster- Conversion- Vector to Raster </li>
+        <li>Vectorizing the rasters: Raster- Conversion- Raster to Vector </li>
+        <li>To clip raster using a mask vector layer: Raster- Extraction- Clip Raster by Mask Layer</li>
+        <li>To reproject the population raster dataset using the CRS of the group’s watershed vector layer: Raster-Projection-Wrap (Reproject)</li>
+        <li>Resampling the layers: Processing-Grass-Raster-r.resamp.stats</li>
+        <li>Extracting factors from DTM layer:
+          Processing-SAGA-Slope, Aspect, Curvature (plan, profile)
+         </li>
+        <li>To categorize elements from attribute tables: Raster Calculator </li>
+        <li>To remove small patches of pixels: Processing-GDAL-Raster Analysis-Sieve</li>
+        <li>To set negative values to null: r.null</li>
+        <li>To remove overlapping polygons: Processing- Vector Overlay- Difference </li>
+        <li>Select the percentage of polygons for training/testing points: 
+          Processing-Vector Selection- Random Selection
+          </li>
+        <li>To create random points inside the polygons: Processing- Vector Creation-Random Points in layer bounds</li>
+        <li>To sample the environmental factors with the training and testing point layers:
+          Point Sampling Tool plugin
+          </li>
+        <li>To generate the Susceptibility Map: 
+          Processing-R-Landslide Susceptibility Mapping- R ModelMap for QGIS
+          </li>
+        <li>To validate R output for the exposure assessment:
+          Processing-Scripts-Accuracy Assessment and Sampling
+          </li>
+        <li>To compute the population counts in each susceptibility class:
+          Processing-Raster Analysis-Raster layer zonal statistics
+          </li>
+      </ul>
+      <img
+         
+        src="webPhoto/Mind map.gif"
+        style="padding-top: 20px; height: 220px;width: 40% "
+        class="theme1"
+      />
+      <a href="https://storyset.com/work" >Work illustrations by Storyset</a>
+    </div>
+    <div id="showingBlock"></div>
+    <img src="webPhoto/roads.png" class="showImg" id="showImg1" />
+    <img src="webPhoto/rivers_.png" class="showImg" id="showImg2" />
+    <img src="webPhoto/faults.png" class="showImg" id="showImg3" />
+    <img src="webPhoto/geologic map.png" class="showImg" id="showImg4" />
+    <img src="webPhoto/NDVI1.jpeg" class="showImg" id="showImg5" />
+    <img src="webPhoto/slope landslide.jpeg" class="showImg" id="showImg6" />
+    <img src="webPhoto/aspect.jpeg" class="showImg" id="showImg7" />
+    <img src="webPhoto/profile.png" class="showImg" id="showImg8" />
+    <img src="webPhoto/plan.png" class="showImg" id="showImg9" />
+    <img src="webPhoto/NLZ.png" class="showImg" id="showImg10" />
+    <img src="webPhoto/theme7.png" class="showImg" id="showImg11" />
+    <img src="webPhoto/theme8.png" class="showImg" id="showImg12" />
+    <img src="webPhoto/machine learning jpg 2.jpg" class="showImg" id="showImg13" />
+    <img src="webPhoto/Training points.jpeg" class="showImg" id="showImg14" />
+    <img src="webPhoto/Testing points.jpeg" class="showImg" id="showImg15" />
+    <img src="webPhoto/Susceptibility map.jpeg" class="showImg" id="showImg16" />
+    <img src="webPhoto/theme10.png" class="showImg" id="showImg17" />
+    <img src="webPhoto/theme15.png" class="showImg" id="showImg18" />
+    <img src="webPhoto/theme17.png" class="showImg" id="showImg19" />
+    <img src="webPhoto/theme18.png" class="showImg" id="showImg20" />
+    <img src="webPhoto/theme19.png" class="showImg" id="showImg21" />
+
+    <div class="open_layers">
+      <div id="map">
+        <div id="popup"></div>
+      </div>
+      <script type="text/javascript" src="openLayers/main.js"></script>
+      <script type="text/javascript" src="openLayers/map.js"></script>
+    </div>
+  </body>
+</html>

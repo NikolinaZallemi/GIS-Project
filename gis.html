@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="gis.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-
+CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="iconfinder-aeaaqqdqqas-3305209_120851.png"
+    />
+    <!-- jquery -->
+    <script>
+      $(document).ready(function () {
+        $("#show_icon").click(function () {
+          $("#show_world").animate({
+            height: "show",
+          });
+        });
+        $("#cancel_icon").click(function () {
+          $("#show_world").animate({
+            height: "hide",
+          });
+        });
+      });
+    </script>
+    <title>GIS</title>
+  </head>
+
+  <body>
+    <div class="part1">
+      <header>
+        <img src="1x/Asset 1-8.png" alt="Mountain" class="logo" />
+      </header>
+
+      <div class="menu_text">
+        <span class="menu_gis">GIS</span> <br />
+        <span class="menu_project">PROJECT</span> <br /><span class="small_text"
+          >2021-2022</span
+        >
+        <br />
+        <a href="learnMore.html"> <button class="button1">explore</button> </a>
+      </div>
+
+      <div
+        class="scroll"
+        style="
+          width: 2em;
+          height: 2em;
+          background-color: transparent;
+          z-index: 80;
+          bottom: 25px;
+          position: absolute;
+          border-width: 0 0.25em 0.25em 0;
+          border-style: solid;
+          border-color: rgb(3, 3, 2);
+          animation: scrolldown 1.2s ease-in-out infinite 0.15s;
+        "
+      ></div>
+      <div
+        class="scroll"
+        style="
+          width: 2em;
+          height: 2em;
+          background-color: transparent;
+          z-index: 80;
+          bottom: 40px;
+          position: absolute;
+          border-width: 0 0.25em 0.25em 0;
+          border-style: solid;
+          border-color: rgb(0, 0, 0);
+          animation: scrolldown 1.2s ease-in-out infinite;
+        "
+      ></div>
+    </div>
+
+    <div class="part2">
+      <div class="animation" id="show_world">
+        <img
+          src="webPhoto/outline_cancel_black_24dp.png"
+          class="cancel_icon"
+          id="cancel_icon"
+        />
+        <p class="landslides">Landslides</p>
+        <p class="lombardy">in Lombardy region</p>
+        <p class="lomb">
+          The project is focused on one of the most critical natural hazards in
+          the Lombardy Region, in Northen Italy. Mainly our group analyzed the
+          mountainous area around lake Endine. <br />
+          <br />
+          The web presents all the steps that were followed for the
+          realization<br />
+          of the study, as well as statistical analysis related to landslide<br />
+          susceptibility mapping. This technique helps us to highlight high
+          and<br />
+          very high hazard zones. Consequently it helps us prepare for the<br />
+          prevention of future landslide occurrence.
+        </p>
+      </div>
+      <div class="drop_video">
+        <p class="text_video">
+          see more
+          <img
+            id="show_icon"
+            src="webPhoto/outline_expand_more_black_24dp.png"
+            class="icon_drop"
+          />
+        </p>
+      </div>
+      <video class="earth_video" controls>
+        <source src="movie (1).ogg" />
+      </video>
+    </div>
+
+    <div id="part5">
+      <div class="contact-us">
+        <h1 class="contact-text">About us</h1>
+        <div class="location">
+          <p>Nikolina Zallemi : nikolina.zallemi@mail.polimi.it</p>
+          <p>--------------------------------------------------</p>
+          <p>Israa Ahmed Mohammed Abdalla : israaahmed@mail.polimi.it</p>
+          <p>--------------------------------------------------</p>
+
+          <p>Ahmed Mohamed Eltahir Yassin : ahmedmohamed1@mail.polimi.it</p>
+        </div>
+        <div class="contact">
+          <a href="https://www.polimi.it/en/" target="_blank"
+            ><button class="button">Polimi Service</button></a
+          >
+        </div>
+      </div>
+      <div class="map">
+        <img src="Screenshot 2021-12-19 175743.jpg" alt="" class="map1" />
+      </div>
+    </div>
+    <script src="gis.js"></script>
+  </body>
+</html>
